@@ -34,4 +34,32 @@ export default class UserService {
       return { error: error.message };
     }
   }
+
+  static async updateUserById(id, userData) {
+    try {
+      const user = await UserRepository.updateUser(id, userData);
+
+      if (!user) {
+        return { message: "User not found" };
+      } else {
+        return user;
+      }
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+
+  static async deleteUser(id) {
+    try {
+      const user = await UserRepository.deleteUser(id);
+
+      if (!user) {
+        return { message: "User not found" };
+      } else {
+        return { message: "successfuly delete user" };
+      }
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
 }

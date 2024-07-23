@@ -29,8 +29,43 @@ export default class userController {
 
   static async getUserById(req, res, next) {
     try {
-      const userId = req.params.id; 
+      const userId = req.params.id;
       const user = await UserService.getUserById(userId);
+
+      if (user.message === "User not found") {
+        return res.status(404).json({ message: "User not found" });
+      } else if (user.error) {
+        return res.status(500).json({ error: user.error });
+      }
+
+      return res.status(200).json(user);
+    } catch (error) {
+      nextFunction(error);
+    }
+  }
+
+  static async updateUserById(req, res, next) {
+    try {
+      const userId = req.params.id;
+      const userData = req.body;
+      const user = await UserService.updateUserById(userId, userData);
+
+      if (user.message === "User not found") {
+        return res.status(404).json({ message: "User not found" });
+      } else if (user.error) {
+        return res.status(500).json({ error: user.error });
+      }
+
+      return res.status(200).json(user);
+    } catch (error) {
+      nextFunction(error);
+    }
+  }
+
+  static async deleteUser(req, res, next) {
+    try {
+      const userId = req.params.id;
+      const user = await UserService.deleteUser(userId);
 
       if (user.message === "User not found") {
         return res.status(404).json({ message: "User not found" });
