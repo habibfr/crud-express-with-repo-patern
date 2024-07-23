@@ -12,7 +12,7 @@
 
 ## Explanation
 
-### [Visual Studio Code](https://code.visualstudio.com/)
+### [A. Visual Studio Code](https://code.visualstudio.com/)
 
 Visual Studio Code (VS Code) adalah salah satu kode editor yang dikembangkan oleh Microsoft. VS Code sangat populer di kalangan pengembang karena menyediakan berbagai fitur yang powerful dan fleksibel untuk pengembangan perangkat lunak. Fitur Utama VS Code adalah sebagai berikut :
 
@@ -25,7 +25,7 @@ Visual Studio Code (VS Code) adalah salah satu kode editor yang dikembangkan ole
 3.  Extensions
     VS Code memiliki ekosistem ekstensi yang luas untuk menambahkan fungsionalitas tambahan, seperti integrasi dengan sistem kontrol versi, dukungan bahasa tambahan, tema, dan banyak lagi.
 
-### [DBeaver](https://dbeaver.io/)
+### [B. DBeaver](https://dbeaver.io/)
 
 DBeaver adalah aplikasi database universal yang digunakan untuk manajemen dan administrasi berbagai jenis database. DBeaver mendukung banyak jenis database termasuk MySQL, PostgreSQL, Oracle, SQL Server, SQLite, dan banyak lagi. Fitur Utama DBeaver adalah sebagai berikut :
 
@@ -38,7 +38,7 @@ DBeaver adalah aplikasi database universal yang digunakan untuk manajemen dan ad
 3.  SQL Editor
     Editor SQL yang kuat dengan fitur seperti syntax highlighting, auto-completion, dan formatting.
 
-### [PostgreSQL](https://www.postgresql.org/)
+### [C. PostgreSQL](https://www.postgresql.org/)
 
 PostgreSQL adalah sistem manajemen basis data relasional (RDBMS) yang bersifat open-source dan canggih. Kelebihan postgreSQL sebagai berikut :
 
@@ -49,7 +49,7 @@ PostgreSQL adalah sistem manajemen basis data relasional (RDBMS) yang bersifat o
 3. Keamanan
    Mendukung berbagai fitur keamanan seperti otentikasi pengguna, kontrol akses tingkat baris (Row Level Security), dan enkripsi.
 
-### [Sequlize](https://sequelize.org/)
+### [D. Sequlize](https://sequelize.org/)
 
 Sequelize adalah ORM (Object-Relational Mapping) untuk Node.js yang mendukung berbagai basis data SQL, termasuk PostgreSQL, MySQL, SQLite, dan MSSQL. Sequelize memungkinkan pengembang untuk berinteraksi dengan basis data menggunakan objek JavaScript daripada menulis query SQL langsung. Berikut adalah beberapa poin utama yang menjelaskan Sequelize:
 
@@ -118,7 +118,7 @@ Config Database :
 Run Migration :
 `npx  sequelize-cli  db:migrate`
 
-### [Express JS](https://expressjs.com/)
+### [E. Express JS](https://expressjs.com/)
 
 Express.js adalah framework web minimalis untuk Node.js yang menyediakan berbagai fitur untuk membangun aplikasi web dan API. Dengan Express.js, dapat membuat server HTTP dan mengatur berbagai rute untuk menangani permintaan HTTP.
 
@@ -211,7 +211,7 @@ export default class UserRepository {
 }
 ```
 
-### [Nodemon](https://nodemon.io/)
+### [F. Nodemon](https://nodemon.io/)
 
 Nodemon adalah tool yang membantu pengembang Node.js dengan secara otomatis me-restart aplikasi ketika ada perubahan pada file di direktori.
 
@@ -221,6 +221,6 @@ Installasi :
 Mengubah scripts di _package.json_
 `"scripts":  {  "start":  "nodemon index.js"  }`
 
-### [Postman](https://www.postman.com/)
+### [G. Postman](https://www.postman.com/)
 
 Postman adalah aplikasi yang digunakan untuk menguji API dengan mengirim permintaan HTTP dan memeriksa respons yang diberikan oleh server.
