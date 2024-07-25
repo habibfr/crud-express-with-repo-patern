@@ -1,11 +1,14 @@
 import UserRepository from "../repository/user-repository.js";
+import UserValidation from "../validation/user-validation.js";
 
 export default class UserService {
   static async createUser(user) {
     try {
-      return await UserRepository.addUser(user);
+      const userValid = UserValidation.CREATE.parse(user);
+      return await UserRepository.addUser(userValid);
     } catch (error) {
-      return { error: error.message };
+      // console.log("Validation Error:", error.errors); // Debugging log
+      return { error: error.errors };
     }
   }
 

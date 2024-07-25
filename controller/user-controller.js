@@ -6,7 +6,8 @@ export default class userController {
     try {
       const user = await UserService.createUser(req.body);
       if (user.error) {
-        return res.status(400).json(user);
+        // console.log("User Error:", user.error); // Debugging log
+        return res.status(400).json(user); // return res.status(400).json(user);
       }
       return res.status(201).json(user);
     } catch (error) {
@@ -15,12 +16,14 @@ export default class userController {
   }
 
   static async getUsers(req, res, nextFunction) {
+    console.log("getUsers started");
     try {
-      const user = await UserService.getAllUsers();
-      if (user.length == 0) {
-        return json("User empty");
+      const users = await UserService.getAllUsers();
+
+      if (users.length === 0) {
+        return res.status(200).json({ message: "User empty" });
       } else {
-        return res.status(201).json(user);
+        return res.status(200).json(users);
       }
     } catch (error) {
       nextFunction(error);
@@ -77,5 +80,9 @@ export default class userController {
     } catch (error) {
       nextFunction(error);
     }
+  }
+
+  static sum(a, b) {
+    return a + b;
   }
 }
